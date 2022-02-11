@@ -1,38 +1,239 @@
-.App {
-  text-align: center;
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root{
+	height: 100%;
+	width: 100%;
+	background:rgba(222, 220, 220, 1.0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.comment-section{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end; 
+	padding-right: 100px;
+	width: 100%;
+	margin-bottom: 100px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.comment--box{
+	min-height: 150px;
+	max-height: 400px;
+	background: white;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	border-radius: 12px;
+	margin-top: 26px;
 }
 
-.App-link {
-  color: #61dafb;
+.user--comment{
+	width: 70%;
+}
+.score{
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+	background: darkblue;
+	color: white;
+	width: 50px;
+	height: 100px;
+	margin-left: 50px;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 12px;
+}
+.score>div{
+	font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.replies-score button, .score button{
+	font-size: 25px;
+	background: transparent;
+	border: none;
+	color: white;
+}
+
+.replies-score button:hover, .score button:hover{
+	cursor: pointer;
+}
+
+.btn-replyit{
+	color: darkblue;
+	display: flex;
+	align-items: center;
+	background: none;
+	border: none;
+}
+
+.user--info,.user--replies-info, .user--re-replies-info{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.comment--text{
+	margin-top: 5px;
+	font-size: 1em;
+}
+
+.reply--box{
+	width: 90%;
+	display: flex;
+	min-height: 100px;
+	max-height: 400px;
+	background: white;
+	margin-top: 15px;
+	align-items: center;
+	justify-content: space-around;
+	border-radius: 12px;
+}
+
+#reply{
+	border: 1px dotted black;
+	outline: none;
+}
+
+.btn--reply{
+	width: 100px;
+	height: 50px;
+	border-radius: 12px;
+	border: none;
+	background: darkblue;
+	color: white;
+}
+
+.replies--box{
+	min-height: 150px;
+	max-height: 300px;
+	background: white;
+	width: 80%;
+	display: flex;
+	align-items: center;
+	border-radius: 12px;
+	margin-top: 20px;
+	border-left: 2px solid darkblue;
+}
+
+ .replies-score{
+ 	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+	background:darkblue;
+	height: 100px;
+	margin-left: 50px;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 12px;
+}
+
+.user--replies{
+	flex: 1;
+}
+
+.replies--text{
+	height: 100%;
+}
+
+.replies--text p{
+	overflow: hidden;
+	font-size: .9em;
+	padding: 5px 20px;
+	/*white-space: nowrap;*/
+	/*overflow: hidden;
+	text-overflow: ellipsis;
+	
+	-webkit-line-clamb: 4;
+	-webkit-box-orient: vertical;*/
+
+}
+
+.replies--text:hover{
+	overflow: hidden;
+}
+
+.replies-score{
+	padding: 0px 17px;
+	font-size: 25px;
+}
+
+.replies-score div{
+	color: white;
+}
+
+.user--replies-info img{
+	width: 50px;
+}
+
+button.btn-delete{
+    background: darkblue;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 12px;
+
+}
+
+/* style ReReply  */
+.re-replies--box{
+	height: 150px;
+	background: white;
+	width: 70%;
+	display: flex;
+	align-items: center;
+	border-radius: 12px;
+	margin-top: 20px;
+	border-left: 2px solid blue;
+}
+
+ .re-replies-score{
+ 	margin: 0px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+	background: rgba(0099,207, 0098, 1.0);
+	height: 100px;
+	margin-left: 50px;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 12px;
+}
+
+.user--re-replies{
+	flex: 1;
+}
+
+.re-replies--text{
+	font-size: .9em;
+	flex: 1;
+	padding-left: 15px;
+	/*white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;*/
+}
+
+.re-replies--text:hover{
+	overflow: visible;
+}
+
+.user--re-replies-info img{
+	width: 50px;
+}
+  
+            
+
+@media(max-width: 500px){
+	.comment-section{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end; 
+		padding-right: 10px;
+		width: 100%;
+	}
 }
